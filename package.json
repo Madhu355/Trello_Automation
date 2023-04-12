@@ -1,0 +1,15 @@
+{
+  "name": "trellotest",
+  "version": "1.0.0",
+  "description": "Test Trello",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Madhu",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.3",
+    "cypress": "^12.9.0"
+  }
+}
