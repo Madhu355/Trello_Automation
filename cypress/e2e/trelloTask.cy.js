@@ -57,5 +57,18 @@ describe("Trello", () => {
         cy.log(x);
         cy.log(y);
       });
+
+    //Logout from Trello
+    cy.get("button[data-testid='header-member-menu-button']").click();
+    cy.get("button[data-testid='account-menu-logout']").click();
+    cy.origin("https://id.atlassian.com", () => {
+      cy.get("#logout-submit").click();
+
+      //Verify logout
+      cy.get(button[(type = "submit")]).should(
+        "have.text",
+        "Sign up - it’s free!"
+      );
+    });
   });
 });
