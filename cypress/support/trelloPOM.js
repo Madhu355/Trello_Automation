@@ -16,7 +16,7 @@ class trelloPageObjects {
   }
   getValidateListTitle1() {
     return cy.get(
-      "#board > div.js-list.list-wrapper.list-wrapper-with-margins > div > div.list-header.js-list-header.u-clearfix.is-menu-shown > h2"
+      ":nth-child(4) > div > div.list-header.js-list-header.u-clearfix.is-menu-shown.ui-sortable-handle > h2"
     );
   }
   getListTitle2() {
@@ -24,7 +24,7 @@ class trelloPageObjects {
   }
   getValidateListTitle2() {
     return cy.get(
-      "#board > div.js-list.list-wrapper.list-wrapper-with-margins > div > div.list-header.js-list-header.u-clearfix.is-menu-shown > h2"
+      ":nth-child(5) > div > div.list-header.js-list-header.u-clearfix.is-menu-shown.ui-sortable-handle > h2"
     );
   }
   getcreateTaskBtn() {
