@@ -31,12 +31,3 @@ Cypress.on("uncaught:exception", (err) => {
     return false;
   }
 });
-Cypress.Commands.add("login", (userName, password) => {
-  cy.get("#user").type(userName);
-  cy.get("#login").click();
-  cy.wait(3000);
-  cy.origin("https://id.atlassian.com", () => {
-    cy.get("#password").type(password);
-    cy.get("#login-submit").click();
-  });
-});
